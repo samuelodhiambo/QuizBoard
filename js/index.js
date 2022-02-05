@@ -5,6 +5,7 @@ var correctAnswers = {
 }
 var dscore = document.getElementById("score");
 var vscore = document.getElementById("score-v");
+var paward = document.getElementById("award");
 var form = document.getElementById("quizform");
 
 form.addEventListener('submit', getFormData)
@@ -20,6 +21,8 @@ function getFormData(event) {
     answers.three = answerThree
 
     var score = grading(answers)
+    var message = award(score)
+    paward.innerHTML = message
     vscore.innerHTML = score
     dscore.style.display = "inline-block"
     disableInput()
@@ -49,5 +52,20 @@ function disableInput() {
     }
     button.setAttribute('disabled', 'disabled')
 
+}
+
+function award(y) {
+    var m
+    if (y > 80) {
+        m = 'Excellent'
+    }
+    else if (y > 50) {
+        m = 'Fair'
+    }
+    else {
+        m = 'Poor... Please Retake the Test'
+    }
+
+    return m;
 }
 

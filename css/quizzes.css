@@ -50,11 +50,11 @@
 
 .score {
     display: none;
-    height: 20%;
+    height: 40%;
     width: 30%;
     background-color: white;
     position: fixed;
-    top: 300px;
+    top: 270px;
     left: 450px;
     text-align: center;
     border: 1px solid black;
