@@ -22,6 +22,7 @@ function getFormData(event) {
     var score = grading(answers)
     vscore.innerHTML = score
     dscore.style.display = "inline-block"
+    disableInput()
     form.reset()
 }
 
@@ -38,5 +39,13 @@ function grading(x) {
     }
 
     return Math.round(score);
+}
+
+function disableInput() {
+    var inputs = document.getElementsByTagName("input")
+    for (x=0; x<=inputs.length-1; x++) {
+        inputs[x].setAttribute('disabled', 'disabled')
+    }
+
 }
 
