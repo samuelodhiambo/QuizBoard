@@ -43,3 +43,19 @@ ul.menu li a {
     color: black;
     font-size: x-large;
 }
+
+.qboard {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #3f8ba8;
+}
+
+.qboard-img {
+    height: 300px;
+}
+
+.qboard-txt {
+    color: white;
+    font-size: xx-large;
+}
