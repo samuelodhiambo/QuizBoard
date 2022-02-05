@@ -106,6 +106,88 @@ footer p {
     margin: 0px 20px;
 }
 
+.nav-btn {
+    display: none;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 920px) {
+    ul.menu {
+        display: none;
+    }
+
+    .nav-btn {
+        display: inline-block;
+        cursor: pointer;
+        border: 1px solid black;
+        padding: 0px 5px 10px 5px;
+    }
+
+    .nav-btn label {
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .nav-icon {
+        display: inline-block;
+        width: 18px;
+        height: 2px;
+        background-color: gray;
+        position: relative;
+    }
+
+    .nav-icon:before {
+        display: inline-block;
+        width: 18px;
+        height: 2px;
+        background-color: gray;
+        content: '';
+        position: absolute;
+        top: 5px;
+    }
+
+    .nav-icon:after {
+        display: inline-block;
+        width: 18px;
+        height: 2px;
+        background-color: gray;
+        content: '';
+        position: absolute;
+        top: -5px;
+    }
+
+    #nav-toggle:checked ~ .nav-btn label .nav-icon:after {
+        transform: rotate(45deg);
+        top: 0px;
+    }
+
+    #nav-toggle:checked ~ .nav-btn label .nav-icon:before {
+        transform: rotate(-45deg);
+        top: 0px;
+    }
+
+    #nav-toggle:checked ~ .nav-btn label .nav-icon {
+        height: 0px;
+    }
+
+    #nav-toggle:checked ~ ul.menu {
+        display: inline-block;
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        background-color: white;
+        width: 100%;
+    }
+
+    #nav-toggle:checked ~ ul.menu li {
+        margin: 20px 10px;
+        text-align: center;
+    }
+}
+
 @media only screen and (max-width: 720px) {
     .qboard {
         flex-direction: column;
