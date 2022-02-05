@@ -43,9 +43,11 @@ function grading(x) {
 
 function disableInput() {
     var inputs = document.getElementsByTagName("input")
+    var button = document.getElementById("submit")
     for (x=0; x<=inputs.length-1; x++) {
         inputs[x].setAttribute('disabled', 'disabled')
     }
+    button.setAttribute('disabled', 'disabled')
 
 }
 
