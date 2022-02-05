@@ -3,7 +3,8 @@ var correctAnswers = {
     two:"Hyper-Text",
     three:"letvar"
 }
-
+var dscore = document.getElementById("score");
+var vscore = document.getElementById("score-v");
 var form = document.getElementById("quizform");
 
 form.addEventListener('submit', getFormData)
@@ -19,8 +20,8 @@ function getFormData(event) {
     answers.three = answerThree
 
     var score = grading(answers)
-
-    alert(score)
+    vscore.innerHTML = score
+    dscore.style.display = "inline-block"
     form.reset()
 }
 
@@ -38,3 +39,4 @@ function grading(x) {
 
     return Math.round(score);
 }
+
