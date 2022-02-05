@@ -105,3 +105,17 @@ footer {
 footer p {
     margin: 0px 20px;
 }
+
+@media only screen and (max-width: 720px) {
+    .qboard {
+        flex-direction: column;
+    }
+
+    .qboard-txt {
+        text-align: center;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+}
