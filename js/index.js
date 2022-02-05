@@ -24,3 +24,17 @@ function getFormData(event) {
     form.reset()
 }
 
+function grading(x) {
+    var score = 0;
+    if (x.one == correctAnswers.one) {
+        score = score + 1/3 * 100
+    }
+    if (x.two == correctAnswers.two) {
+        score = score + 1/3 * 100
+    }
+    if (x.three == correctAnswers.three) {
+        score = score + 1/3 * 100
+    }
+
+    return Math.round(score);
+}
